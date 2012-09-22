@@ -1,0 +1,31 @@
+{
+  "name": "Form Populator",
+  "version": "1.0",
+
+  "permissions": [
+      "tabs",
+
+      "clipboardRead",
+      "clipboardWrite",
+
+      "http://*/*",
+      "https://*/*"
+  ],
+
+  "browser_action": {
+      "default_title": "Form Populator",
+      "default_popup": "form.html"
+  },
+
+  "content_scripts": [
+      {
+          "matches": [
+              "http://*/*",
+              "https://*/*"
+          ],
+          "js": ["populator.js"]
+      }
+  ],
+
+  "manifest_version": 2
+}
